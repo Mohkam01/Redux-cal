@@ -16,7 +16,10 @@ class Result extends Component {
 }
 const mapStateToProps = (state) => {
   return {
-    info: state.number
+    info: state.screen
   };
 };
-export default connect(mapStateToProps)(Result);
+export default connect(
+  mapStateToProps,
+  null
+)(Result);
