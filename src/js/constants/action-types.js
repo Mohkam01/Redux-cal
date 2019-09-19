@@ -17,3 +17,4 @@ export const BTN1 = "BTN1";
 export const BTN2 = "BTN2";
 export const BTN3 = "BTN3";
 export const BTN4 = "BTN4";
+export const SHOW = "SHOW";

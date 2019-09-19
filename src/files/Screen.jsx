@@ -3,7 +3,6 @@ import "./Style.css";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import Digit from "./components/Digit";
-// import Operator from "./components/Operation";
 import {
   setOperator,
   setInt1,
@@ -55,6 +54,7 @@ const mapStateToProps = (state) => {
     btn2: state.btn2,
     btn3: state.btn3,
     btn4: state.btn4,
+    result: state.result,
     active: state.active,
     nonActive: state.nonActive,
     result: state.result
@@ -329,6 +329,7 @@ class Screen extends Component {
   render() {
     return (
       <React.Fragment>
+        <p className="col-md-5">{this.props.result}</p>
         <div className="row error-screen">
           <p id="screen" className="col-md-5">
             "output screen for errors or memory"

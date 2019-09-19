@@ -16,7 +16,8 @@ import {
   BTN1,
   BTN2,
   BTN3,
-  BTN4
+  BTN4,
+  SHOW
 } from "../constants/action-types";
 const initialState = {
   integer1: 0,
@@ -71,6 +72,7 @@ function rootReducer(state = initialState, action) {
       int2_check: action.payload
     });
   } else if (action.type === CALCULATE) {
+    console.log(" i am called by saga");
     return Object.assign({}, state, {
       integer2: 0,
       integer1: action.payload,
@@ -150,6 +152,10 @@ function rootReducer(state = initialState, action) {
       btn2: false,
       btn3: false,
       btn4: true
+    });
+  } else if (action.type === SHOW) {
+    return Object.assign({}, state, {
+      result: action.payload
     });
   }
 
